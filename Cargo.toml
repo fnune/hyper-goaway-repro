@@ -1,0 +1,18 @@
+[package]
+name = "hyper-goaway-repro"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+h2 = "0.3.15"
+http = "0.2.8"
+hyper = { version = "0.14.24", features = ["client", "http2", "tcp"] }
+tokio = { version = "1.25.0", features = ["full"] }
+
+[[bin]]
+name = "server"
+path = "src/server/bin/main.rs"
+
+[[bin]]
+name = "client"
+path = "src/client/bin/main.rs"
